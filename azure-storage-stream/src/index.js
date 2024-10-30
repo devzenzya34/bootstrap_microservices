@@ -8,7 +8,7 @@ const PORT = process.env.PORT;
 const STORAGE_ACCOUNT_NAME = process.env.STORAGE_ACCOUNT_NAME;
 const STORAGE_ACCOUNT_KEY = process.env.STORAGE_ACCOUNT_KEY;
 
-// Function that conects to Azure Blob Storage
+// Function that connects to Azure Blob Storage
 function createBlobService() {
     const sharedKeyCredential = new StorageSharedKeyCredential(STORAGE_ACCOUNT_NAME, STORAGE_ACCOUNT_KEY);
     const blobService = new BlobServiceClient(`https://${STORAGE_ACCOUNT_NAME}.blob.core.windows.net`, sharedKeyCredential);
