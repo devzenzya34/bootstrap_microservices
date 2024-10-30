@@ -19,4 +19,4 @@ Source: Bootstrapping Microservices, Second Edition by Ashley Davis
 
 2- Package and Build image: `docker build -t video-stream .`
 
-3- Run image: `docker run -p 3000:3000 video-stream`
+3- Run image: `docker run -d -p 3000:3000 -e PORT=3000 video-stream`

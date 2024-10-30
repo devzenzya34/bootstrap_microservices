@@ -12,10 +12,6 @@ WORKDIR /usr/src/app
 FROM base AS prod-deps
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --prod --frozen-lockfile
 
-#COPY package*.json ./
-
-## cmd for install dependencies for automated environments CI/CD
-#RUN npm ci --omit=dev
 FROM base
 COPY --from=prod-deps /usr/src/app/node_modules /usr/src/app/node_modules
 COPY ./src ./src
