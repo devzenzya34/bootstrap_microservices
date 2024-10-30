@@ -14,3 +14,9 @@ Source: Bootstrapping Microservices, Second Edition by Ashley Davis
 
 ## Publish video stream microservice
 ### build and publish your first microservice using Docker (feat/publish branch)
+
+1- Create Dockerfile
+
+2- Package and Build image: `docker build -t video-stream .`
+
+3- Run image: `docker run -p 3000:3000 video-stream`
