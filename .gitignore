@@ -1,0 +1,8 @@
+# created by virtualenv automatically
+.env
+.pyvenv.cfg
+.idea
+.vscode
+.venv/*
+
+*/node_modules/*
