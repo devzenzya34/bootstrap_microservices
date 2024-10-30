@@ -2,9 +2,10 @@
   "name": "video-stream",
   "version": "1.0.0",
   "type": "module",
-  "main": "express.js",
+  "main": "src/express.js",
   "scripts": {
-    "start": "nodemon express.js",
+    "start": "node ./src/express.js",
+    "start:dev": "nodemon ./src/express.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
