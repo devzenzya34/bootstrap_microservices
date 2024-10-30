@@ -1,8 +1,8 @@
 import express from 'express';
-import dotenv from 'dotenv';
+//import dotenv from 'dotenv';
 import fs from 'fs';
 
-dotenv.config();
+//dotenv.config();
 // Throw error if .env file is not found
 if (!process.env.PORT) {
     throw new Error('Please specify de PORT in the .env file that is not found');

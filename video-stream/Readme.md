@@ -34,3 +34,6 @@ Source: Bootstrapping Microservices, Second Edition by Ashley Davis
     . tag: `docker tag <image name> <container registry url>:<image name>:latest` \
     . push: `docker push <container registry url>:<image name>:<tag>` \
     verify it in services/repository
+
+## Data Management
+### Docker Compose - Azure Storage - Storage-blob - MongoDb 
