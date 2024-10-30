@@ -37,3 +37,10 @@ Source: Bootstrapping Microservices, Second Edition by Ashley Davis
 
 ## Data Management
 ### Docker Compose - Azure Storage - Storage-blob - MongoDb 
+
+1- Create docker-compose.yml and run `docker-compose up -d --build`
+
+2- Open the app on local computer: `http://localhost:4000/videos`
+
+3- Using Azure Storage and create a new container to host a second microservice \
+Create a storage account on azure portal ( videostorage34 )\
