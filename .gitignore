@@ -1,5 +1,5 @@
 # created by virtualenv automatically
-local-stream/.env
+*/.env
 .pyvenv.cfg
 .idea
 .vscode

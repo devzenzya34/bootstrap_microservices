@@ -37,7 +37,8 @@
 * 1- Create docker-compose.yml and run `docker-compose up -d --build`
 * 2- Open the app on local computer: `http://localhost:4000/videos`
 * 3- Using Azure Storage and create a new container to host a second microservice
-* Create a storage account on azure portal ( videostorage34 )
+* 4- Create a storage account on azure portal ( videostorage34 ) and upload video file on the cloud storage
+* 5- Launch app with npm and check if file if reachable at `http://localhost:3000/videos?path=sample_video.mp4`
 
 
 ### 4-Test code, microservices, and application JEST and PAYWRIGHT
