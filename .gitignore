@@ -1,5 +1,5 @@
 # created by virtualenv automatically
-video-stream/.env
+local-stream/.env
 .pyvenv.cfg
 .idea
 .vscode

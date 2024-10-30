@@ -4,9 +4,9 @@ services:
     video-stream:
         image: video-stream
         build:
-            context: ./video-stream
+            context: local-stream
             dockerfile: Dockerfile
-        container_name: video-stream
+        container_name: local-stream
         ports:
             - "4000:80"
         environment:
