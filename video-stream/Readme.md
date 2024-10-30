@@ -1,4 +1,4 @@
-# The first microservice video stream app
+# **The first microservice video stream app**
 Source: Bootstrapping Microservices, Second Edition by Ashley Davis
 
 ## Create a video stream microservice
@@ -19,4 +19,18 @@ Source: Bootstrapping Microservices, Second Edition by Ashley Davis
 
 2- Package and Build image: `docker build -t video-stream .`
 
-3- Run image: `docker run -d -p 3000:3000 -e PORT=3000 video-stream`
+3- Run image: `docker run -d -p 3000:3000 -e PORT=3000 video-stream` \
+    to debug container `docker exec -it <container id> /bin/bash` \
+    to stop container `docker container stop <container id>` \
+
+4- Test container: `curl http://localhost:3000/videos`
+
+5- Use Microsoft Azure Portal to deploy in a private containerRegistry
+    in a custom resources group \
+    **_Don't forget to enable user adminitrator keys_**
+
+6- Push image to container registry: `docker push <container registry name>:<image name>` \ 
+    . login: `docker login <container registry url> --username <username> --password <password>` \
+    . tag: `docker tag <image name> <container registry url>:<image name>:latest` \
+    . push: `docker push <container registry url>:<image name>:<tag>` \
+    verify it in services/repository
