@@ -39,6 +39,10 @@
 * 3- Using Azure Storage and create a new container to host a second microservice
 * 4- Create a storage account on azure portal ( videostorage34 ) and upload video file on the cloud storage
 * 5- Launch app with npm and check if file if reachable at `http://localhost:3000/videos?path=sample_video.mp4`
+* 6- Create a new container on Azure Storage and upload a video file on the cloud storage
+* 7- Update docker-compose.yml to use the new container
+* 8- Update the video stream microservice to use the new container
+* 9- Test the app with the new video on `http://localhost:4000/videos?path=sample_video.mp4`
 
 
 ### 4-Test code, microservices, and application JEST and PAYWRIGHT

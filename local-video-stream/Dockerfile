@@ -16,5 +16,6 @@ FROM base
 COPY --from=prod-deps /usr/src/app/node_modules /usr/src/app/node_modules
 COPY ./src ./src
 COPY ./videos ./videos
+COPY .env .env
 
 CMD [ "npm", "start" ]

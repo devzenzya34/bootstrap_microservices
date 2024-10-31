@@ -8,21 +8,21 @@ services:
             dockerfile: Dockerfile
         container_name: video-storage
         ports:
-            - "4002:80"
+            - "4000:80" #4000
         environment:
             - PORT=80
             - STORAGE_ACCOUNT_NAME=${STORAGE_ACCOUNT_NAME}
             - STORAGE_ACCOUNT_KEY=${STORAGE_ACCOUNT_KEY}
         restart: "no"
-        
+
     video-stream:
         image: video-stream
         build:
-            context: local-video-stream
+            context: ./local-video-stream
             dockerfile: Dockerfile
         container_name: local-video-stream
         ports:
-            - "4001:80"
+            - "4001:80" #4001
         environment:
             - PORT=80
             - VIDEO_STORAGE_HOST=video-storage

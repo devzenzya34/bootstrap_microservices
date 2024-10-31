@@ -1,13 +1,19 @@
 import express from 'express';
-//import dotenv from 'dotenv';
+import dotenv from 'dotenv';
 import http from "http";
 import fs from 'fs';
 
-//dotenv.config();
-// Throw error if .env file is not found
-if (!process.env.PORT) {
-    throw new Error('Please specify de PORT in the .env file that is not found');
+const result = dotenv.config();
+if (result.error) {
+    console.error("Erreur lors du chargement du fichier .env :", result.error);
+    process.exit(1);
 }
+
+console.log("Variables d'environnement chargées :", {
+    PORT: process.env.PORT,
+    STORAGE_ACCOUNT_NAME: process.env.STORAGE_ACCOUNT_NAME,
+    // Ne pas logger STORAGE_ACCOUNT_KEY pour des raisons de sécurité
+});
 
 // Configure connection to the video-storage microservice
 const PORT = process.env.PORT;
@@ -50,6 +56,6 @@ app.get('/videos', (req, res) => {
     fs.createReadStream(videoPath).pipe(res);
 })*/
 
-app.listen(port, () => {
-    console.log(`Server listening on port ${port}`);
+app.listen(PORT, () => {
+    console.log(`Server listening on port ${PORT}`);
 })
