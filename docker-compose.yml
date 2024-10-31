@@ -1,14 +1,30 @@
 version: "3.8"
 
 services:
+    azure-storage:
+        image: azure-storage
+        build:
+            context: ./azure-storage-stream
+            dockerfile: Dockerfile
+        container_name: video-storage
+        ports:
+            - "4002:80"
+        environment:
+            - PORT=80
+            - STORAGE_ACCOUNT_NAME=${STORAGE_ACCOUNT_NAME}
+            - STORAGE_ACCOUNT_KEY=${STORAGE_ACCOUNT_KEY}
+        restart: "no"
+        
     video-stream:
         image: video-stream
         build:
-            context: local-stream
+            context: local-video-stream
             dockerfile: Dockerfile
-        container_name: local-stream
+        container_name: local-video-stream
         ports:
-            - "4000:80"
+            - "4001:80"
         environment:
             - PORT=80
+            - VIDEO_STORAGE_HOST=video-storage
+            - VIDEO_STORAGE_PORT=80
         restart: "no"
