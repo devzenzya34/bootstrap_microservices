@@ -1,8 +1,13 @@
 # created by virtualenv automatically
-.env
+
 .pyvenv.cfg
 .idea
 .vscode
 .venv/*
 
 */node_modules/*
+## env files
+azure-storage-stream/.env
+local-video-stream/.env
+
+## https://videostorage34.blob.core.windows.net/videos/sample_video.mp4
