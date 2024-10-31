@@ -8,12 +8,12 @@ if (result.error) {
     process.exit(1);
 }
 
-console.log("Variables d'environnement chargées :", {
-    PORT: process.env.PORT,
-    TEST: process.env.TEST,
-    NAME: process.env.NAME,
-    // Ne pas logger STORAGE_ACCOUNT_KEY pour des raisons de sécurité
-});
+// console.log("Variables d'environnement chargées :", {
+//     PORT: process.env.PORT,
+//     TEST: process.env.TEST,
+//     NAME: process.env.NAME,
+//     // Ne pas logger STORAGE_ACCOUNT_KEY pour des raisons de sécurité
+// });
 
 const PORT = process.env.PORT;
 const STORAGE_ACCOUNT_NAME = process.env.NAME;
@@ -33,7 +33,8 @@ const app = express();
 // Index route
 app.get('/videos', async (req, res) => {
     const videoPath = req.query.path;
-    console.log(`videoPath: ${videoPath}`);
+    //console.log(`videoPath: ${videoPath}`);
+    
     const containerName = "videos";
     const blobService = createBlobService();
 

@@ -43,6 +43,8 @@
 * 7- Update docker-compose.yml to use the new container
 * 8- Update the video stream microservice to use the new container
 * 9- Test the app with the new video on `http://localhost:4000/videos?path=sample_video.mp4`
+* 10- Add Database to the microservice **(MongoDb)**
+use it in development environment - load some fixture data (db-fixture folder) - test for local environment at `http://localhost:4002/videos?id=<video id>`
 
 
 ### 4-Test code, microservices, and application JEST and PAYWRIGHT
@@ -52,11 +54,3 @@
 ### 8-Deploy microservices on a production cluster with kubernetes
 ### 9-Create a production infrastructure using Terraform
 ### 10-Create a CI/CD pipeline that deploys application code on a Github Repository
-
-
-## Create a video stream microservice
-
-## Publish video stream microservice
-
-
-## Data Management
