@@ -23,7 +23,7 @@ const VIDEO_STORAGE_PORT = process.env.VIDEO_STORAGE_PORT;
 const DBHOST = process.env.DBHOST;
 const DBNAME = process.env.DBNAME;
 
-async function main() {
+async function main() &_                                                            
   // Connect to MongoDB
   const client = new mongodb.MongoClient(DBHOST);
   await client.connect(DBNAME);
@@ -72,7 +72,7 @@ async function main() {
         'Content-Type': 'video/mp4'
     });
     fs.createReadStream(videoPath).pipe(res);
-})*/
+  })*/
 
   app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`);
